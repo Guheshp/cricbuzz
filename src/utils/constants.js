@@ -1,0 +1,1 @@
+export const LOGO = "https://static.cricbuzz.com/images/cb_logo.svg"

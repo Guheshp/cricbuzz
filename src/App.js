@@ -3,14 +3,18 @@ import './App.css';
 import Error from './components/Error';
 import NavBar from './components/NavBar';
 import Body from './components/Body';
+import SubNavBar from './components/SubNavBar';
+import Scorecard from './components/Scorecard';
+import Squad from './components/Squad';
 
 
 function Main() {
 
   return (
-    <div className='border px-3'>
+    <div className="px-60 ">
       <NavBar />
-      <Outlet />
+      <Body />
+
     </div>
   )
 }
@@ -21,8 +25,12 @@ const appRouter = createBrowserRouter([
     element: <Main />,
     children: [
       {
-        path: "/",
-        element: <Body />
+        path: "/scorecard",
+        element: <Scorecard />
+      },
+      {
+        path: "/squads",
+        element: <Squad />
       },
     ],
     errorElement: <Error />
